@@ -1,0 +1,16 @@
+% Load the dataset as a csv or .txt file
+data = load('ex1data1.txt');
+
+% X is the entire first column and Y is the second ( feature and target respectively, population and profit)
+X = data(:, 1); y = data(:, 2);
+m = length(y); % number of training examples
+
+% After basic extraction we need to modify 
+
+X = [ones(m,1), data(:, 1)] % adding a column infront which represents the constant term
+
+theta = zeros(2,1) % for Theta(1) and Theta(2);
+
+iterations = 1500;
+alpha = 0.01;
+
